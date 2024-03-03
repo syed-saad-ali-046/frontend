@@ -1,0 +1,28 @@
+.user-profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-picture-container {
+  margin-top: 20px;
+}
+
+.upload-label {
+  display: block;
+  margin-top: 20px;
+}
+
+.upload-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
