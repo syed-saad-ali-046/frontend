@@ -233,6 +233,16 @@ const SignupForm = () => {
                 Sign Up
               </button>
             </div>
+            <p className="text-center text-sm text-gray-500">
+              Already Have a Account?
+              <a
+                href="/signin"
+                className="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none"
+              >
+                Sign in
+              </a>
+              .
+            </p>
             {errorMessage && (
                <div className="text-red-500 text-sm flex items-center justify-center">
                 <span role="img" aria-label="Error">&#10060;</span> <strong>{errorMessage}</strong>
