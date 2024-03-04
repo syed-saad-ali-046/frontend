@@ -8,7 +8,7 @@ const UserProfile = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.get('https://fypbackend.netlify.app/api/user/profile', { withCredentials: true });
+      const response = await axios.get('http://localhost:8000/api/user/profile', { withCredentials: true });
       setUserProfile(response.data.user);
     } catch (error) {
       if (error.response && error.response.status === 401) {

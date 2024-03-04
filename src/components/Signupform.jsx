@@ -68,7 +68,7 @@ const SignupForm = () => {
     }
 
     try {
-      const response = await fetch('https://fypbackend.netlify.app/api/user/signup', {
+      const response = await fetch('http://localhost:8000/api/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
