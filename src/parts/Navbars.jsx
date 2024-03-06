@@ -84,7 +84,7 @@ const Navbar = () => {
 <div class={`block lg:hidden ${menuHidden ? 'hidden' : ''}`}>
   <ul class="text-center">
     <li class="py-3 font-bold text-slate-600"><a href="#">Cart</a></li>
-    <li class="py-3 font-bold text-slate-600"><a href="/signup">Account</a></li>
+    <li class="py-3 font-bold text-slate-600"><a href="/signin">Account</a></li>
   </ul>
 </div>
 
