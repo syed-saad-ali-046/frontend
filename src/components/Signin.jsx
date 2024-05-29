@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from '../parts/Navbars';
+import Footer from '../parts/Footer';
 
 const SigninForm = () => {
   const [formData, setFormData] = useState({
@@ -76,7 +78,9 @@ const SigninForm = () => {
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+    <div>
+      <Navbar/>
+    <div className="mt-5 mb-10 relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
       <div className="w-full">
         <div className="text-center">
           <h1 className="text-3xl font-semibold text-gray-900">User Sign In</h1>
@@ -159,6 +163,9 @@ const SigninForm = () => {
           </form>
         </div>
       </div>
+      </div>
+       <Footer/>
+   
     </div>
   );
 };

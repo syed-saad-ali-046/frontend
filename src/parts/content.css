@@ -1,0 +1,27 @@
+.quote-container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  .quote {
+    margin-top: 5%;
+    display: inline-block;
+    text-align: center; /* Align text within the quote */
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #f7f7f7; /* Background color of the quote */
+    border-left: 5px solid #929191; /* Left border color and width */
+    margin: 0 auto; /* Center the quote */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    color: #383838;
+  }
+  
+  .quote:hover {
+    background-color: #e4e3e3; /* Darker background color on hover */
+  }
+  @media screen and (min-width: 1024px) {
+  .fancy-button{
+    letter-spacing: 4px;
+}
+} 

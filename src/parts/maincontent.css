@@ -1,0 +1,17 @@
+.main{
+    margin-left: 10%;
+    margin-top: 3%; 
+}
+.fancy-button{
+    letter-spacing: 8px;
+    margin-top: 2%;
+}
+@media only screen and (max-width: 768px) {
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .max-w-md {
+      max-width: none;
+    }
+  }

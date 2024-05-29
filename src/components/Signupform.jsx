@@ -1,5 +1,6 @@
-
 import React, { useState } from 'react';
+import Navbar from '../parts/Navbars';
+import Footer from '../parts/Footer';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -93,7 +94,10 @@ const SignupForm = () => {
 
 
   return (
-    <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+    <div>
+    <Navbar/>
+    
+    <div className=" mt-5 mb-10 relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
       <div className="w-full">
         <div className="text-center">
           <h1 className="text-3xl font-semibold text-gray-900">Sign Up</h1>
@@ -219,12 +223,6 @@ const SignupForm = () => {
   </label>
 </div>
 
-
-
-            
-
-            {/* ... (repeat for other input fields) ... */}
-
             <div className="my-6">
               <button
                 type="submit"
@@ -233,16 +231,6 @@ const SignupForm = () => {
                 Sign Up
               </button>
             </div>
-            <p className="text-center text-sm text-gray-500">
-              Already Have a Account?
-              <a
-                href="/signin"
-                className="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none"
-              >
-                Sign in
-              </a>
-              .
-            </p>
             {errorMessage && (
                <div className="text-red-500 text-sm flex items-center justify-center">
                 <span role="img" aria-label="Error">&#10060;</span> <strong>{errorMessage}</strong>
@@ -256,7 +244,22 @@ const SignupForm = () => {
           </form>
         </div>
       </div>
+      <p className="text-center text-sm text-gray-500">
+              Already Have a Account?
+              <a
+                href="/signin"
+                className="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none"
+              >
+                 Sign in
+              </a>
+              .
+    </p>
     </div>
+    <Footer/>
+    </div>
+   
+    
+    
   );
 };
 

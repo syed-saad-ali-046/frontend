@@ -1,0 +1,115 @@
+@media screen and (max-width: 1024px) {
+   
+    .standard{
+        width:auto;
+        margin: auto;
+    }
+    .slick-arrow {
+        width: 12%;
+        margin-left: 2%;
+    }
+    .slick-next::before{
+    font-family: 'slick';
+    font-size: 100px;
+    line-height: 0;
+    opacity: 1;
+    color: #000000;
+    animation: zoom-in-zoom-out 5s ease-in infinite;
+    }
+    .slick-next{
+        top: 50%;
+    }
+    .slick-next:before {
+        content: '\203a';
+    }
+    .slick-prev {
+        visibility: hidden;
+    }
+    .slick-dots{
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .slick-arrow {
+        width: 21%;
+    }
+    .slick-next::before{
+    font-family: 'slick';
+    font-size: 100px;
+    line-height: 0;
+    opacity: 1;
+    color: #000000;
+    animation: zoom-in-zoom-out 5s ease-in infinite;
+    }
+    .slick-next{
+        top: 47%;
+    }
+    .slick-next:before {
+        content: '\203a';
+    }
+    .slick-prev {
+        visibility: hidden;
+    }
+    .slick-dots{
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    }
+    .standard{
+        width: auto;
+        
+    }
+  }
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .standard{
+        width:auto;
+        margin: auto;
+    }
+    .slick-arrow {
+        width: 12%;
+        margin-left: 2%;
+    }
+    .slick-next::before{
+    font-family: 'slick';
+    font-size: 100px;
+    line-height: 0;
+    opacity: 1;
+    color: #000000;
+    animation: zoom-in-zoom-out 5s ease-in infinite;
+    }
+    .slick-next{
+        top: 50%;
+    }
+    .slick-next:before {
+        content: '\203a';
+    }
+    .slick-prev {
+        visibility: hidden;
+    }
+    .slick-dots{
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    }
+  
+}
