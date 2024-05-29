@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import "./Herosections.css"
 const HeroSlider = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -26,7 +26,7 @@ const HeroSlider = ({ slides }) => {
 
   return (
     <div
-  className="relative h-[500px] overflow-hidden mt-5"
+  className="relative main h-[500px] overflow-hidden mt-5"
   onMouseEnter={() => setIsHovered(true)}
   onMouseLeave={() => setIsHovered(false)}
   style={{ cursor: 'pointer' }}

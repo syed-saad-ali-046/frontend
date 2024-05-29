@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='parent'>
+    <div className='parent '>
       <nav>
       
         <div class="p-2 border border-slate-400 bg-slate-100" id='firstnav'>

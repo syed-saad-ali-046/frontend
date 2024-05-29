@@ -3,7 +3,7 @@ import "./maincontent.css";
 
 const MainContent = () => {
   return (
-    <div className="grid grid-cols-2 gap-8 items-center justify-center min-h-screen px-4 py-8 bg-white sm:px-6 lg:px-8 main">
+    <div className="grid grid-cols-2 gap-8 items-center justify-center min-h-screen px-4 py-8 bg-white sm:px-6 sm:justify-center lg:px-8 main">
       <div className="max-w-md">
         <img
           alt="Fashion model"
