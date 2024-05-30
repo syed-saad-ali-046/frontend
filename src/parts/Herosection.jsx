@@ -35,7 +35,7 @@ const HeroSlider = ({ slides }) => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 sm:mr-10 flex items-center justify-center transition-opacity duration-100 ease-in-out ${
+          className={`absolute inset-0  flex items-center justify-center transition-opacity duration-100 ease-in-out ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
