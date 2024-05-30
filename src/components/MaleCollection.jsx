@@ -52,7 +52,7 @@ const Mcollection = ({ productsData }) => {
         onCategorySortChange={handleCategorySortChange}
       />
       <SearchDropdown productsData={productsData} onFilterChange={setFilteredProducts} />
-      <h1 className="font-normal font-serif leading-relaxed text-center text-4xl mt-4">
+      <h1 className="font-normal font-serif special leading-relaxed text-center text-4xl mt-4">
         Male Collection
       </h1>
       <div className="container mx-auto mt-10 bg-slate-50 border border-gray-300 rounded-lg shadow-lg shadow-gray-300/100 p-6">

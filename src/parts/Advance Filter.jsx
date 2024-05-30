@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Advance Filter.css"
 
 const Advance = ({ onPriceSortChange, onCategorySortChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,7 @@ const Advance = ({ onPriceSortChange, onCategorySortChange }) => {
   };
 
   return (
-    <div className="absolute right-5 text-left mt-6 z-10">
+    <div className="absolute filter right-5 text-left mt-6 z-10">
       <div>
         <button
           onClick={toggleDropdown}
