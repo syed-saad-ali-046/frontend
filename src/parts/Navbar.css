@@ -15,8 +15,6 @@
 }
 @media only screen and (max-width: 768px) {
     .parent{
-        width: 106%;
-        padding: auto;
-        position: center;
+        width: 100%;
     }
 }

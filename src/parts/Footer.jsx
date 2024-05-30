@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Footer.css"
 
 const Footer=()=>{
     return(
-        <footer className="bg-gray-950 text-gray-50 p-6 md:p-10">
+      <footer className="bg-gray-950 text-gray-50 p-6 dad md:p-10">
       <div className="container max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div className="flex flex-col items-start gap-4">
           <div className="text-2xl font-bold">Farhang</div>

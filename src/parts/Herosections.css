@@ -92,9 +92,7 @@
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
-    .slider-container{
-        margin-left: 3%;
-    }
+   
     .content h1 {
       font-size: 2rem;
     }

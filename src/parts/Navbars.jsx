@@ -13,8 +13,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className='parent '>
-      <nav>
+    <div >
+      <nav className='parent '>
       
         <div class="p-2 border border-slate-400 bg-slate-100" id='firstnav'>
           <div class="container mx-auto">

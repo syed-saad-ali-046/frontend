@@ -10,7 +10,7 @@ import Footer from "../parts/Footer";
 
 const Home=()=>{
     return(
-        <div>
+        <div className="nutshell">
             <Navbar/>
             <HeroSlider slides={slides} />
             <Content/>
