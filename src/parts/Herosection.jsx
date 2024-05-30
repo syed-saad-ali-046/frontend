@@ -83,7 +83,7 @@ const HeroSlider = ({ slides }) => {
         </svg>
       </button>
       <button
-        className="absolute top-1/2 lg:right-12 md:right-10 transform -translate-y-1/2 text-white bg-black bg-opacity-35 p-2 rounded-full"
+        className="absolute top-1/2 button lg:right-12 md:right-10 transform -translate-y-1/2 text-white bg-black bg-opacity-35 p-2 rounded-full"
         onClick={handleNextSlide}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10">
