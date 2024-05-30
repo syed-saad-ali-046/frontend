@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const SearchDropdown = ({ productsData, onFilterChange }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -67,7 +68,9 @@ const SearchDropdown = ({ productsData, onFilterChange }) => {
             product.Name.toLowerCase().includes(searchInput.toLowerCase())
           ).map((product, index) => (
             <li key={index} className="p-2 hover:bg-gray-100">
-              {highlightText(product.Brand, searchInput)} - {highlightText(product.Name, searchInput)}
+              <Link to={`/products/${product.id}`}> {/* Use Link for navigation */}
+                {highlightText(product.Brand, searchInput)} - {highlightText(product.Name, searchInput)}
+              </Link>
             </li>
           ))}
         </ul>

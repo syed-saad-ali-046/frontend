@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../parts/Navbars";
 import Advance from "../parts/Advance Filter";
 import SearchDropdown from "../parts/Search FIlter";
+import "./MaleCollection.css";
 
 const Mcollection = ({ productsData }) => {
   const [filteredProducts, setFilteredProducts] = useState(productsData);
@@ -51,42 +52,41 @@ const Mcollection = ({ productsData }) => {
         onCategorySortChange={handleCategorySortChange}
       />
       <SearchDropdown productsData={productsData} onFilterChange={setFilteredProducts} />
-      <h1 className="font-normal font-serif leading-relaxed text-center text-4xl mt-4 ">
+      <h1 className="font-normal font-serif leading-relaxed text-center text-4xl mt-4">
         Male Collection
       </h1>
-      <div className="container space-x-20 display: flex mx-auto mt-10 bg-slate-50 border border-gray-300 rounded-lg shadow-lg shadow-gray-300/100">
-        {filteredProducts.map((product) => (
-          <div key={product.id} className="ml-6 mt-6">
-            <Link to={`/products/${product.id}`}>
-              <img
-                src={product.Image}
-                alt={product.Name}
-                className="rounded-lg shadow-lg shadow-gray-400/100"
-                style={{ maxWidth: "250px", maxHeight: "250px" }}
-              />
-            </Link>
-            <div
-              className="flex flex-col mt-2"
-              style={{ padding: "0", maxWidth: "250px", maxHeight: "250px" }}
-            >
-              <p className="p-2 font-normal font-serif leading-6 text-center">
-                Brand: {product.Brand}
-              </p>
-              <p className="p-2 font-normal font-serif leading-6 text-gray-600 text-center">
-                {product.Name}
-              </p>
-              <p className="p-2 font-normal font-serif leading-6 text-gray-600 text-center">
-                Rs.{product.Price}
-              </p>
-              <Link
-                to={`/products/${product.id}`}
-                className="p-2 font-normal font-serif leading-6 text-gray-600 text-center"
-              >
-                || Explore ||
+      <div className="container mx-auto mt-10 bg-slate-50 border border-gray-300 rounded-lg shadow-lg shadow-gray-300/100 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {filteredProducts.map((product) => (
+            <div key={product.id} className="flex flex-col items-center">
+              <Link to={`/products/${product.id}`} className="block w-full">
+                <img
+                  src={product.Image}
+                  alt={product.Name}
+                  className="rounded-lg shadow-lg shadow-gray-400/100 w-full object-cover"
+                  style={{ maxHeight: "250px" }}
+                />
               </Link>
+              <div className="flex flex-col mt-2 w-full text-center">
+                <p className="p-2 font-normal font-serif leading-6">
+                  Brand: {product.Brand}
+                </p>
+                <p className="p-2 font-normal font-serif leading-6 text-gray-600">
+                  {product.Name}
+                </p>
+                <p className="p-2 font-normal font-serif leading-6 text-gray-600">
+                  Rs.{product.Price}
+                </p>
+                <Link
+                  to={`/products/${product.id}`}
+                  className="p-2 font-normal font-serif leading-6 text-gray-600"
+                >
+                  || Explore ||
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
