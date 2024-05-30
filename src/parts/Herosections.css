@@ -1,4 +1,7 @@
 @media(max-width:700px){
+    .main{
+        margin-left: 7%;
+    }
     .button{
         margin-left: 83%;
     
