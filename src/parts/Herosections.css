@@ -1,15 +1,113 @@
-@media(max-width:700px){
-    .main{
-        margin-left: 1%;
-        
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .content.show {
+    opacity: 1;
+  }
+  
+  .content h1 {
+    font-size: 4rem;
+    color: white;
+  }
+  
+  .content p {
+    font-size: 1.25rem;
+    color: gray;
+    margin-top: 1rem;
+  }
+  
+  .content .cta {
+    font-size: 1.25rem;
+    color: gray;
+    margin-top: 1rem;
+    text-decoration: underline;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.35);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+  }
+  
+  .prev-button {
+    left: 1rem;
+  }
+  
+  .next-button {
+    right: 1rem;
+  }
+  
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .slider-container{
+        margin-left: 3%;
     }
-    .button{
-        margin-left: 84%;
-    
+    .content h1 {
+      font-size: 2rem;
     }
-}
-@media only screen and (max-width: 768px) {
-    .main {
-        margin-left: 6%;
+  
+    .content p,
+    .content .cta {
+      font-size: 1rem;
     }
-}
+  
+   
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  
