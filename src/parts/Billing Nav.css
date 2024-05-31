@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+    .bnav {
+        width: 383px;
+        font-size: 14px;
+        margin-left: 14px;
+    }
+}

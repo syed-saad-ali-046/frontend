@@ -1,11 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
+import "./Billing Nav.css"
 
 
 function BNavbar() {
   const location = useLocation();
 
   return (
-    <div className="text-center py-8">
+    <div className="text-center py-8 bnav">
       <div className="text-3xl font-bold">Check Out!</div>
       <div className="flex justify-center space-x-4 mt-5">
         <Link

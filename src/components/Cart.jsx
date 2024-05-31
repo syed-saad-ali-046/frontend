@@ -57,7 +57,7 @@ const Cart = () => {
             <div className="flex flex-col pl-10 mt-11 max-md:pl-5 max-md:max-w-full  ">
               {updatedCart.map((item, index) => (
                 <div key={index} className="flex gap-5 justify-between items-start text-sm max-md:flex-wrap ml-7 border border-gray-200 mb-3">
-                  <div className="flex gap-5 justify-between self-stretch font-semibold leading-6 text-zinc-800 mt-3 ml-5">
+                  <div className="cont flex gap-5 justify-between self-stretch font-semibold leading-6 text-zinc-800 mt-3 ml-5">
                     <img
                       loading="lazy"
                       src={item.image}
@@ -80,7 +80,7 @@ const Cart = () => {
                     onClick={()=>dispatch(removefromCart({id:item.id, color: item.color,size: item.size,image: item.image}))}
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9e7625736ac4e7743e9e529ae41f9eb40f158116d150923ce43367fe708b57c?apiKey=797f5151b0a645b2aee21ee1c2971527&"
-                    className="shrink-0 w-3 aspect-square mr-2 mt-2" 
+                    className="shrink-0 w-3 aspect-square mr-2 mt-2 cross" 
                     alt="Cancel Order"
                   />
                   </a>
