@@ -1,19 +1,12 @@
 .stan{
-    width: 80%;
-    justify-content: center;
-  	align-items: center;
-    margin-left: 10%;
-    margin-top: 3%;
+    width: auto;
+    
+  	
 }
-@media (max-width: 768px) {
-  .cont {
-    margin-top: 32px;
-    margin-bottom: -20px;
-}
-.cross{
-  margin-bottom: 2px;
-  position: absolute;
-  top: 71.5%;
-  right: 40px;
-}
+@media only screen and (max-width: 768px) {
+  .nutshell{
+      width: auto;
+      overflow: hidden;
+  }
+  
 }

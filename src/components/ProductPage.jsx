@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../parts/Navbars";
 import { useDispatch } from "react-redux";
 import { addtoCart } from "../Redux-States/Cartslice";
-import { Link } from "react-router-dom";
+import "./ProductPage.css"
 
 export default function Component({ products }) {
   const { id } = useParams();
@@ -51,7 +51,7 @@ export default function Component({ products }) {
   };
 
   return (
-    <div>
+    <div className="nutshell">
       <Navbar />
       <h1 className="font-normal font-serif leading-relaxed text-center text-4xl ">
         {product.Brand}

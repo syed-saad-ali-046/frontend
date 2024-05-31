@@ -47,7 +47,7 @@ function Shipping() {
         dispatch(updateCart(updatedCart));
     };
   return (
-<div>
+<div className="nutshell">
 <Navbar/>  
 <div className="flex flex-col md:flex-row mb-20 md:space-x-8 justify-center">
 <div className="w-auto md:w-1/2">
