@@ -49,8 +49,7 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-
-            <div className="flex justify-center pl-10 mt-11 md:pl-5">
+            <div className="custom flex flex-col  mt-11 max-md:pl-5 max-md:max-w-full  ">
               {updatedCart.map((item, index) => (
                 <div key={index} className="flex gap-5 justify-between items-start text-sm flex-wrap border border-gray-200 mb-3 p-3">
                   <img
