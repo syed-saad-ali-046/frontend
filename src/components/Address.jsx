@@ -364,8 +364,8 @@ function AddressInfo() {
       </div>
 
             
-  <div className="border-t border-gray-300 pt-4 ">
-        <p className="text-lg font-semibold  ">Payment Method</p>
+  <div className="border-t border-gray-300 pt-4 md:ml-5 ">
+        <p className="text-lg font-semibold ">Payment Method</p>
         <div className="flex items-center">
           <div className="flex ">
             <input
@@ -398,7 +398,7 @@ function AddressInfo() {
       </div>
       <div className=" flex button justify-center items-center px-16 py-3 mt-8 text-base font-semibold leading-6 text-center text-white rounded-lg bg-zinc-800 max-md:px-5 max-md:max-w-full">
         <div className="flex gap-4">
-          <div >Continue Shipping</div>
+          <div onClick={handleContinueShipping ()} >Continue Shipping</div>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3d0673f997987ad7107e50688cf5a936cbb06c5b7d56023662ff6f9c4e12895?apiKey=797f5151b0a645b2aee21ee1c2971527&"
