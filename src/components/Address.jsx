@@ -136,13 +136,11 @@ function AddressInfo() {
 
     
   return (
-    <div>
+    <div className="nutshell">
       <Navbar />
       <BNavbar/>
       <div className="flex flex-col md:flex-row mb-20 md:space-x-8 justify-center">
-      <div className="flex  items-center  min-h-screen ">
-      <div className="w-full mb-10 mr-20 md:w-3/3">
-        <div className="bg-gray-50 p-4 rounded-lg border-gray-300 shadow-lg">
+        <div className="form mr-5 px-8 py-4 bg-gray-50  rounded-lg border-gray-400 shadow-lg">
             <h2 className="text-xl font-semibold mb-2">Shipping Information</h2>
             <div className="flex justify-between items-center mb-2">
               <div>
@@ -307,50 +305,41 @@ function AddressInfo() {
               </div>
             </div>
           </div>
-        </div>
-        
-      </div>
-      
-      <div className="mr-4 border border-gray-400 border-1 mt-10 hidden lg:block" style={{height: 650}}></div>
-
-  <div className="w-full md:w-1/3  mt-20">
-
-    <div className="flex flex-col space-y-4">
-      <div className="flex flex-col pl-10  max-md:pl-5 max-md:max-w-full  ">
-              {updatedCart.map((item, index) => (
-                <div key={index} className="flex gap-5 justify-between items-start text-sm max-md:flex-wrap ml-7 border border-gray-200 mb-3">
-                  <div className="flex gap-5 justify-between self-stretch font-semibold leading-6 text-zinc-800 mt-3 ml-5">
-                    <img
-                      loading="lazy"
-                      src={item.image}
-                      className="shrink-0 my-auto w-32 max-w-full aspect-[1.02]"
-                      alt={item.name}
-                    />
-                    <div className="flex flex-col">
-                      <div className="text-base leading-6">{item.name}</div>
-                      <div className="mt-1 text-neutral-500">Cloth ID: {item.id}</div>
-                      <div className="justify-center px-2 py-1 mt-4 text-center rounded bg-neutral-100">
-                        Qty: {item.quantity}
-                      </div>
-                      <div className="mt-4 text-center text-stone-900 mb-2">
-                        Rs. {item.price * item.quantity} {/* Calculate total price */}
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#">
-                  <img
-                    onClick={()=>dispatch(removefromCart({id:item.id, color: item.color,size: item.size,image: item.image}))}
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9e7625736ac4e7743e9e529ae41f9eb40f158116d150923ce43367fe708b57c?apiKey=797f5151b0a645b2aee21ee1c2971527&"
-                    className="shrink-0 w-3 aspect-square mr-2 mt-2" 
-                    alt="Cancel Order"
-                  />
-                  </a>
-                </div>
-              ))}
-            </div>
-    
-      <div className="flex flex-col space-y-4 p-4 bg-white">
+          <div className="mr-4 border border-gray-400 border-1 mb-5 hidden lg:block sm:block" style={{height: 650}}></div>
+          <div className="card w-full md:w-1/3 items-center">
+      <div className="flex flex-col space-y-4">
+      {updatedCart.map((item, index) => (
+     <div key={index} className="flex gap-5 justify-between items-start text-sm max-md:flex-wrap ml-7 border border-gray-200 mb-3">
+     <div className="flex gap-5 justify-between items-center self-stretch font-semibold leading-6 text-zinc-800 mt-3 ml-5">
+       <img
+         loading="lazy"
+         src={item.image}
+         className="shrink-0 my-auto w-32 max-w-full aspect-[1.02]"
+         alt={item.name}
+       />
+       <div className="flex flex-col">
+         <div className="text-base leading-6">{item.name}</div>
+         <div className="mt-1 text-neutral-500">Cloth ID: {item.id}</div>
+         <div className="justify-center px-2 py-1 mt-4 text-center rounded bg-neutral-100">
+           Qty: {item.quantity}
+         </div>
+         <div className="mt-4 text-center text-stone-900 mb-2">
+           Rs. {item.price * item.quantity} {/* Calculate total price */}
+         </div>
+       </div>
+     </div>
+     <a href="#">
+     <img
+       onClick={()=>dispatch(removefromCart({id:item.id, color: item.color,size: item.size,image: item.image}))}
+       loading="lazy"
+       src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9e7625736ac4e7743e9e529ae41f9eb40f158116d150923ce43367fe708b57c?apiKey=797f5151b0a645b2aee21ee1c2971527&"
+       className="shrink-0 w-3 aspect-square mr-2 mt-2" 
+       alt="Cancel Order"
+     />
+     </a>
+   </div>
+       ))}
+      <div className="flex flex-col price space-y-4 p-4 bg-white">
         <div className="text-lg font-semibold">PRICE DETAILS({totalItems} ITEMS)</div>
         <div className="flex justify-between">
           <div>Total</div>
@@ -374,10 +363,11 @@ function AddressInfo() {
         </div>
       </div>
 
-      <div className="border-t border-gray-300 pt-4 mb-5">
-        <p className="text-lg font-semibold">Payment Method</p>
-        <div className="flex">
-          <div className="flex items-center mt-2">
+            
+  <div className="border-t border-gray-300 pt-4 ">
+        <p className="text-lg font-semibold  ">Payment Method</p>
+        <div className="flex items-center">
+          <div className="flex ">
             <input
               type="radio"
               id="cash_on_delivery"
@@ -400,32 +390,33 @@ function AddressInfo() {
               className="mr-2"
             />
             <label htmlFor="card_payment">Card Payment</label>
-          </div>
-        </div>
-      </div>
+            </div>
+            </div>
 
-{/* Card Form */}
+
       <CardPaymentModal isOpen={showCardForm} onClose={() => setShowCardForm(false)} />
-      <div onClick={handleContinueShipping} className="flex justify-center items-center px-16 py-3 mt-20 text-base font-semibold leading-6 text-center text-white rounded-lg bg-zinc-800 max-md:px-5 max-md:max-w-full">
-              <div className="flex gap-4">
-            
-                <div >Continue Shipping</div>
+      </div>
+      <div className=" flex button justify-center items-center px-16 py-3 mt-8 text-base font-semibold leading-6 text-center text-white rounded-lg bg-zinc-800 max-md:px-5 max-md:max-w-full">
+        <div className="flex gap-4">
+          <div >Continue Shipping</div>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3d0673f997987ad7107e50688cf5a936cbb06c5b7d56023662ff6f9c4e12895?apiKey=797f5151b0a645b2aee21ee1c2971527&"
                   className="shrink-0 w-6 aspect-square"
                 />
                 
-              </div>
-        </div>
+      </div>
+      </div>
         
-    </div>
+    
    
+   
+  
   </div>
   </div>
-      <Footer />
-
-    </div>
+  </div>
+  <Footer />
+  </div>
   );
 }
 

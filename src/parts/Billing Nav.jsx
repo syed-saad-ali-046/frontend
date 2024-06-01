@@ -19,7 +19,7 @@ function BNavbar() {
         </Link>
         <Link
           to="/information"
-          className={`flex items-center font-semibold ${location.pathname === '/information' ? 'text-black' : 'text-gray-500'}`}
+          className={`flex items-center font-semibold ${location.pathname === '/Shipping-Info' ? 'text-black' : 'text-gray-500'}`}
         >
           Information
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-3">
@@ -28,7 +28,7 @@ function BNavbar() {
         </Link>
         <Link
           to="/shipping"
-          className={`flex items-center font-semibold ${location.pathname === '/shipping' ? 'text-black' : 'text-gray-500'}`}
+          className={`flex items-center font-semibold ${location.pathname === '/Address' ? 'text-black' : 'text-gray-500'}`}
         >
           Shipping
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-3">
@@ -37,7 +37,7 @@ function BNavbar() {
         </Link>
         <Link
           to="/payment"
-          className={`flex items-center font-semibold ${location.pathname === '/payment' ? 'text-black' : 'text-gray-500'}`}
+          className={`flex items-center font-semibold ${location.pathname === '/order-confirmation' ? 'text-black' : 'text-gray-500'}`}
         >
           Confirmation
         </Link>

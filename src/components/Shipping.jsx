@@ -5,6 +5,7 @@ import {useDispatch,useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Navbar from "../parts/Navbars";
 import Footer from "../parts/Footer";
+import "./Shipping.css"
 function Shipping() {
   const [formData, setFormData] = useState({
     email: "",
@@ -50,7 +51,7 @@ function Shipping() {
 <div className="nutshell">
 <Navbar/>  
 <div className="flex flex-col md:flex-row mb-20 md:space-x-8 justify-center">
-<div className="w-auto md:w-1/2">
+  <div className="w-auto md:w-1/2">
     <BNavbar/>
     <div className="px-8 py-4 ">
             <div className="flex justify-between items-center mb-6">
@@ -164,13 +165,13 @@ function Shipping() {
             >
               ← Return to cart
             </Link>
-          </div>
-        </div>
+    </div>
+    </div>
     
    
   <div className="mr-4 border border-gray-400 border-1 mt-10 hidden lg:block" style={{height: 650}}></div>
 
-  <div className="w-full md:w-1/3  mt-20">
+<div className="card w-full md:w-1/3 items-center mt-20">
 
     <div className="flex flex-col space-y-4">
     {updatedCart.map((item, index) => (
@@ -204,7 +205,7 @@ function Shipping() {
      </a>
    </div>
        ))}
-      <div className="flex flex-col space-y-4 p-4 bg-white">
+      <div className="flex flex-col price space-y-4 p-4 bg-white">
         <div className="text-lg font-semibold">PRICE DETAILS({totalItems} ITEMS)</div>
         <div className="flex justify-between">
           <div>Total</div>
@@ -235,7 +236,7 @@ function Shipping() {
   className="text-md text-black-600"
   onClick={handleSaveToLocalStorage}
 >
-  <div className="flex justify-center items-center px-16 py-3 mt-8 text-base font-semibold leading-6 text-center text-white rounded-lg bg-zinc-800 max-md:px-5 max-md:max-w-full">
+  <div className="flex button justify-center items-center px-16 py-3 mt-8 text-base font-semibold leading-6 text-center text-white rounded-lg bg-zinc-800 max-md:px-5 max-md:max-w-full">
     <div className="flex gap-4">
       <div onClick={() => {
         handleSaveToLocalStorage();
@@ -251,9 +252,9 @@ function Shipping() {
   </div>
 </Link>
 
-    </div>
+</div>
    
-  </div>
+</div>
 </div>
 <Footer/>
 </div>
