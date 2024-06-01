@@ -49,40 +49,39 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-            <div className="custom flex flex-col  mt-11 max-md:pl-5 max-md:max-w-full  ">
-              {updatedCart.map((item, index) => (
-                <div key={index} className="flex gap-5 justify-between items-start text-sm flex-wrap border border-gray-200 mb-3 p-3">
-                  <img
-                      onClick={() => dispatch(removefromCart({ id: item.id, color: item.color, size: item.size, image: item.image }))}
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9e7625736ac4e7743e9e529ae41f9eb40f158116d150923ce43367fe708b57c?apiKey=797f5151b0a645b2aee21ee1c2971527&"
-                      className=""
-                      alt="Cancel Order"
-                    />
-                  <div className="flex gap-5 self-stretch font-semibold leading-6 text-zinc-800 mt-3">
-                    <img
-                      loading="lazy"
-                      src={item.image}
-                      className="shrink-0 my-auto w-32 aspect-[1.02]"
-                      alt={item.name}
-                    />
-                    <div className="flex flex-col">
-                      <div className="text-base leading-6">{item.name}</div>
-                      <div className="mt-1 text-neutral-500">Cloth ID: {item.id}</div>
-                      <div className="justify-center px-2 py-1 mt-4 text-center rounded bg-neutral-100">
-                        Qty: {item.quantity}
-                      </div>
-                      <div className="mt-4 text-center text-stone-900 mb-2">
-                        Rs. {item.price * item.quantity}
-                      </div>
-                    </div>
-                     
-                    
-                  </div>
-                 
-                  
-                </div>
-              ))}
+      <div className="custom flex flex-col  mt-11 max-md:pl-5 max-md:max-w-full  ">
+            {updatedCart.map((item, index) => (
+     <div key={index} className="flex gap-5 justify-between items-start text-sm max-md:flex-wrap ml-7 border border-gray-200 mb-3">
+     <div className="flex gap-5 justify-between self-stretch font-semibold leading-6 text-zinc-800 mt-3 ml-5">
+       <img
+         loading="lazy"
+         src={item.image}
+         className="shrink-0 my-auto w-32 max-w-full aspect-[1.02]"
+         alt={item.name}
+       />
+       <div className="flex flex-col">
+         <div className="text-base leading-6">{item.name}</div>
+         <div className="mt-1 text-neutral-500">Cloth ID: {item.id}</div>
+         <div className="justify-center px-2 py-1 mt-4 text-center rounded bg-neutral-100">
+           Qty: {item.quantity}
+         </div>
+         <div className="mt-4 text-center text-stone-900 mb-2">
+           Rs. {item.price * item.quantity} {/* Calculate total price */}
+         </div>
+       </div>
+     </div>
+     <a href="#">
+     <img
+       onClick={()=>dispatch(removefromCart({id:item.id, color: item.color,size: item.size,image: item.image}))}
+       loading="lazy"
+       src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9e7625736ac4e7743e9e529ae41f9eb40f158116d150923ce43367fe708b57c?apiKey=797f5151b0a645b2aee21ee1c2971527&"
+       className="shrink-0 w-3 aspect-square mr-2 mt-2" 
+       alt="Cancel Order"
+     />
+     </a>
+   </div>
+       ))}
+
             </div>
           </div>
         </div>
