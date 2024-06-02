@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Toggle from './Tooglecart';
 import logo2 from "../assets/logo2.png";
+import { useSelector } from "react-redux";
 import './Navbar.css'
 import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
+  const cartItems = useSelector(state => state.cart.cart);
   const [menuHidden, setMenuHidden] = useState(true);
-
   const toggleMenu = () => {
     setMenuHidden(!menuHidden);
   };
@@ -111,20 +112,22 @@ const Navbar = () => {
     
   </div>
 </div>
-<div class={`block lg:hidden ${menuHidden ? 'hidden' : ''}`}>
-  <ul class=" text-center">
-  <li className="py-3 font-semibold flex justify-center">
-  <a href="#">
-    <p><Toggle/></p>
-  </a>
-</li>
-
-
-   
-
-    <li class="py-3 font-bold text-slate-600 mb-15"><a href="/signup">Account</a></li>
-  </ul>
+<div>
+  {window.innerWidth <= 768 && cartItems.length > 0 && (
+    <sup className="absolute top-10 right-1 text-sm bold text-black-500 ml-1 ">{cartItems.length}</sup>
+  )}
+  <div class={`block lg:hidden ${menuHidden ? 'hidden' : ''}`}>
+    <ul class="text-center">
+      <li className="py-3 font-semibold flex justify-center">
+        <a href="#">
+          <p><Toggle/></p>
+        </a>
+      </li>
+      <li class="py-3 font-bold text-slate-600 mb-15"><a href="/signup">Account</a></li>
+    </ul>
+  </div>
 </div>
+
 
       </nav>
     </div>

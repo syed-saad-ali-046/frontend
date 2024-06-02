@@ -128,7 +128,7 @@ const MultiCardCarousel = ({ productData }) => {
         </div>
       )}
       <a className='move' href='./male-collection'>
-        <span className="font-normal font-serif fancy-button text-2xl text-center uppercase tracking-wide underline"><p>Explore More&nbsp;→</p></span>
+        <span className="font-normal text font-serif fancy-button text-2xl text-center uppercase tracking-wide underline md:text-lg"><p>Explore More&nbsp;→</p></span>
       </a>
     </div>
    

@@ -37,6 +37,9 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .text{
+        font-size: 1rem;
+    }
     .standard{
         width: 80%;
         background-color: white;
