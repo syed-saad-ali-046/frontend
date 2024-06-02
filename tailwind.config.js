@@ -6,6 +6,9 @@ module.exports = {
       violet: {
         '500': '#8B5CF6', // Change the hex code to your desired shade of purple
       },
+      fontFamily: {
+        'mono': ['ui-monospace'],
+      },
     },
   },
   plugins: [],
