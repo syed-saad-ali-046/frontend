@@ -114,7 +114,7 @@ const Navbar = () => {
 </div>
 <div>
   {window.innerWidth <= 768 && cartItems.length > 0 && (
-    <sup className="absolute top-10 right-1 font-mono font-bold text-red-600 ml-1 ">{cartItems.length}</sup>
+    <sup className="absolute top-10 right-1 text-sm font-mono font-bold text-red-600 ml-1 ">{cartItems.length}</sup>
   )}
   <div class={`block lg:hidden ${menuHidden ? 'hidden' : ''}`}>
     <ul class="text-center">
