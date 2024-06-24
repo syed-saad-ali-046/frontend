@@ -3,15 +3,16 @@ import { useParams } from "react-router-dom";
 import Navbar from "../parts/Navbars";
 import { useDispatch } from "react-redux";
 import { addtoCart } from "../Redux-States/Cartslice";
-import "./ProductPage.css"
+import { motion, AnimatePresence } from "framer-motion";
+import "./ProductPage.css";
 
 export default function Component({ products }) {
   const { id } = useParams();
   const product = products.find((product) => product.id.toString() === id);
 
   const [mainImage, setMainImage] = useState(product?.Image || "");
-  const [selectedColor, setSelectedColor] = useState(""); 
-  const [selectedSize, setSelectedSize] = useState(""); 
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
   const dispatch = useDispatch();
 
   if (!product) return <div>Product not found</div>;
@@ -50,6 +51,12 @@ export default function Component({ products }) {
     );
   };
 
+  const variants = {
+    initial: { x: "0%" },
+    animate: { x: 0 },
+    exit: { x: "0%" },
+  };
+
   return (
     <div className="nutshell">
       <Navbar />
@@ -58,31 +65,54 @@ export default function Component({ products }) {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto py-12">
         <div className="grid gap-4">
-          <img
-            alt="Product Image"
-            className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
-            src={mainImage}
-          />
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={mainImage}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={variants}
+              transition={{ duration: 0.9}}
+              className="relative"
+            >
+              <motion.img
+                alt="Product Image"
+                className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
+                src={mainImage}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.9 }}
+              />
+              <motion.div
+                className="absolute inset-0 bg-white"
+                initial={{ width: "100%" }}
+                animate={{ width: 0 }}
+                exit={{ width: "100%" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              />
+            </motion.div>
+          </AnimatePresence>
           <div className="flex space-x-8 justify-center">
             <div className="cursor-pointer" onClick={() => handleThumbnailClick(product?.Image || "")}>
               <img
                 alt="Product Thumbnail 1"
                 src={product?.Image || ""}
-                className="w-20 h-20 object-cover rounded-lg border border-gray-300 bg-gray-200  hover:opacity-50 transition duration-300"
+                className="w-20 h-20 object-cover rounded-lg border border-gray-300 bg-gray-200 hover:opacity-50 transition duration-300"
               />
             </div>
             <div className="cursor-pointer" onClick={() => handleThumbnailClick(product?.Image2 || "")}>
               <img
                 alt="Product Thumbnail 2"
                 src={product?.Image2 || ""}
-                className="w-20 h-20 object-cover rounded-lg border border-gray-300  hover:opacity-50 transition duration-300"
+                className="w-20 h-20 object-cover rounded-lg border border-gray-300 hover:opacity-50 transition duration-300"
               />
             </div>
             <div className="cursor-pointer" onClick={() => handleThumbnailClick(product?.Image3 || "")}>
               <img
                 alt="Product Thumbnail 3"
                 src={product?.Image3 || ""}
-                className="w-20 h-20 object-cover rounded-lg border border-gray-300  hover:opacity-50 transition duration-300"
+                className="w-20 h-20 object-cover rounded-lg border border-gray-300 hover:opacity-50 transition duration-300"
               />
             </div>
           </div>
