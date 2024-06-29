@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import SignupForm from './components/Signupform';
 import SigninForm from './components/Signin';
@@ -13,6 +14,7 @@ import AddressInfo from './components/Address';
 import Payment from './components/Payment';
 import Policy from './components/Policy';
 import Product from './components/Products';
+import Catalogue from './components/Catalogue';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -35,6 +37,8 @@ function Ways() {
                     <Route path="/order-confirmation" element={<Payment/>}/>
                     <Route path="/policy" element={<Policy/>}/>
                     <Route path="/products" element={<Product/>}/>
+                    <Route path="/catalogue" element={<Catalogue/>}/>
+                    
 
                 </Routes>
         </Router>
