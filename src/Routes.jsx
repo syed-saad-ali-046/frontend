@@ -15,7 +15,7 @@ import Payment from './components/Payment';
 import Policy from './components/Policy';
 import Product from './components/Products';
 import Catalogue from './components/Catalogue';
-import ShirtTryon from './components/ShirtTryon':
+import ShirtTryon from './components/ShirtTryon';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
