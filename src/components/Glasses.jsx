@@ -19,7 +19,7 @@ export default function GlassTryon() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div>
@@ -37,7 +37,7 @@ export default function GlassTryon() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-200">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter text-center">Browse Our Frames</h2>
           <p className="mt-4 text-center text-muted-foreground">Find your perfect pair and try them on virtually.</p>
