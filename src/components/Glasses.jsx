@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function GlassTryon() {
   return (
     <div className="flex flex-col">
@@ -12,9 +13,9 @@ export default function GlassTryon() {
               Visualize your perfect pair of glasses before you buy. Our advanced model lets you see how they'll look on
               your face in real-time.
             </p>
-            <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary/90">
+            <button className="px-6 py-3 bg-primary-foreground text-primary hover:bg-primary/90 rounded-lg text-lg">
               Try On Glasses
-            </Button>
+            </button>
           </div>
         </div>
       </section>
@@ -41,7 +42,7 @@ export default function GlassTryon() {
           <h2 className="text-3xl font-bold tracking-tighter text-center">Browse Our Frames</h2>
           <p className="mt-4 text-center text-muted-foreground">Find your perfect pair and try them on virtually.</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-8">
-            <a href="#" className="group" prefetch={false}>
+            <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
                   src="/placeholder.svg"
@@ -53,7 +54,7 @@ export default function GlassTryon() {
               </div>
               <div className="mt-2 text-center text-sm font-medium group-hover:underline">Frame 1</div>
             </a>
-            <a href="#" className="group" prefetch={false}>
+            <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
                   src="/placeholder.svg"
@@ -65,7 +66,7 @@ export default function GlassTryon() {
               </div>
               <div className="mt-2 text-center text-sm font-medium group-hover:underline">Frame 2</div>
             </a>
-            <a href="#" className="group" prefetch={false}>
+            <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
                   src="/placeholder.svg"
@@ -77,7 +78,7 @@ export default function GlassTryon() {
               </div>
               <div className="mt-2 text-center text-sm font-medium group-hover:underline">Frame 3</div>
             </a>
-            <a href="#" className="group" prefetch={false}>
+            <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
                   src="/placeholder.svg"
@@ -89,9 +90,9 @@ export default function GlassTryon() {
               </div>
               <div className="mt-2 text-center text-sm font-medium group-hover:underline">Frame 4</div>
             </a>
-          /div>
+          </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
