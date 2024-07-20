@@ -31,8 +31,8 @@ export default function GlassTryon() {
               </p>
             </div>
             <div className="grid gap-4">
-              <img src="/placeholder.svg" width={550} height={310} alt="Virtual Try-On" className="rounded-lg" />
-              <img src="/placeholder.svg" width={550} height={310} alt="Virtual Try-On" className="rounded-lg" />
+              <img src="https://media.targetoptical.com/2023/Q4/VTO-PLP-espot-a-D.jpg" width={550} height={310} alt="Virtual Try-On" className="rounded-lg" />
+              <img src="https://aestar.tech/wp-content/uploads/2023/04/glasses-logo.png" width={550} height={310} alt="Virtual Try-On" className="rounded-lg" />
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function GlassTryon() {
             <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg"
+                  src="https://image.made-in-china.com/318f0j00fRYUsgknCKiJ/SR7113-ZT-mp4.webp"
                   width={300}
                   height={300}
                   alt="Glasses Frame"
@@ -57,7 +57,7 @@ export default function GlassTryon() {
             <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg"
+                  src="https://www.favrspecs.com/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,background=%23F8F8F8/media/product-variants/8277/0cFXzU4L910XuFDR/eyeglasses-markus-t-light-blue-front.png"
                   width={300}
                   height={300}
                   alt="Glasses Frame"
@@ -69,7 +69,7 @@ export default function GlassTryon() {
             <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg"
+                  src="https://www.markus-t.com/crop/assets/images/L1-064-174-174-001-1190x614xresize.jpg"
                   width={300}
                   height={300}
                   alt="Glasses Frame"
@@ -81,7 +81,7 @@ export default function GlassTryon() {
             <a href="#" className="group">
               <div className="aspect-square bg-background rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg"
+                  src="https://media.visio-net.co.uk/oscommerce/images/viewerxxl_new_1000/dolce-and-gabbana-DG5098-3133-54__P21__shad__qt.jpg"
                   width={300}
                   height={300}
                   alt="Glasses Frame"
