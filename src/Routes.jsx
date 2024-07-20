@@ -16,6 +16,7 @@ import Policy from './components/Policy';
 import Product from './components/Products';
 import Catalogue from './components/Catalogue';
 import ShirtTryon from './components/ShirtTryon';
+import GlassTryon from './components/Glasses';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -40,7 +41,7 @@ function Ways() {
                     <Route path="/products" element={<Product/>}/>
                     <Route path="/catalogue" element={<Catalogue/>}/>
                     <Route path="/shirttryon" element={<ShirtTryon/>}/>
-                    
+                    <Route path="/glassestryon" element={<GlassTryon/>}/>                    
 
                 </Routes>
         </Router>
