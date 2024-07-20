@@ -3,22 +3,23 @@ import React from 'react';
 export default function GlassTryon() {
   return (
     <div className="flex flex-col">
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary-foreground">
-        <div className="container px-4 md:px-6 text-center text-primary-foreground">
-          <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              Experience Virtual Glasses Try-On
-            </h1>
-            <p className="max-w-[700px] mx-auto text-lg md:text-xl">
-              Visualize your perfect pair of glasses before you buy. Our advanced model lets you see how they'll look on
-              your face in real-time.
-            </p>
-            <button className="px-6 py-3 bg-primary-foreground text-primary hover:bg-primary/90 rounded-lg text-lg">
-              Try On Glasses
-            </button>
-          </div>
-        </div>
-      </section>
+     <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-black via-gray-500 to-white">
+       <div className="container px-4 md:px-6 text-center text-white">
+         <div className="space-y-4">
+      <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+        Experience Virtual Glasses Try-On
+      </h1>
+      <p className="max-w-[700px] mx-auto text-lg md:text-xl">
+        Visualize your perfect pair of glasses before you buy. Our advanced model lets you see how they'll look on
+        your face in real-time.
+      </p>
+      <button className="px-6 py-3 bg-white text-black hover:bg-gray-300 rounded-lg text-lg">
+        Try On Glasses
+      </button>
+    </div>
+  </div>
+</section>
+
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 items-center">
