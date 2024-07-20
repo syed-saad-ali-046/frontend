@@ -6,7 +6,7 @@ export default function ShirtTryon() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <img
-              src="/placeholder.svg"
+              src="https://www.roddandgunn.com/on/demandware.static/-/Library-Sites-rodd-shared-library/default/dw7bf6b8a2/02%20GLOBAL/SIZE%20GUIDE/FitGuide_Polos.jpg"
               alt="Hero"
               className="mx-auto aspect-video rounded-xl object-center sm:w-full lg:order-last lg:aspect-square"
             />
@@ -69,7 +69,7 @@ export default function ShirtTryon() {
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src="https://2020.asia.wordcamp.org/files/2019/07/size-chart.png"
               alt="Sizing Guide"
               className="mx-auto aspect-video rounded-xl object-cover object-center sm:w-full lg:order-last"
             />
