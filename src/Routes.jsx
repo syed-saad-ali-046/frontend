@@ -15,6 +15,7 @@ import Payment from './components/Payment';
 import Policy from './components/Policy';
 import Product from './components/Products';
 import Catalogue from './components/Catalogue';
+import ShirtTryon from './components/ShirtTryon':
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -38,6 +39,7 @@ function Ways() {
                     <Route path="/policy" element={<Policy/>}/>
                     <Route path="/products" element={<Product/>}/>
                     <Route path="/catalogue" element={<Catalogue/>}/>
+                    <Route path="/shirttryon" element={<ShirtTryon/>}/>
                     
 
                 </Routes>
