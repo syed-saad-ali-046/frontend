@@ -1,7 +1,12 @@
 import React from 'react';
+import Navbar from "../parts/Navbars";
+import Footer from "../parts/Footer";
+
 
 export default function GlassTryon() {
   return (
+    <>
+    <Navbar/>
     <div className="flex flex-col">
      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-black via-gray-500 to-white">
        <div className="container px-4 md:px-6 text-center text-white">
@@ -51,7 +56,7 @@ export default function GlassTryon() {
                   height={300}
                   alt="Glasses Frame"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                />
+                  />
               </div>
               <div className="mt-2 text-center text-sm font-medium group-hover:underline">Frame 1</div>
             </a>
@@ -95,5 +100,7 @@ export default function GlassTryon() {
         </div>
       </section>
     </div>
+    <Footer/>
+                  </>
   );
 }

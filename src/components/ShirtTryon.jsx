@@ -1,6 +1,13 @@
 import React from 'react';
+import Navbar from '../parts/Navbars';
+import Footer from "../parts/Footer";
+
+
+
 export default function ShirtTryon() {
   return (
+    <>
+    <Navbar/>
     <div className="flex flex-col min-h-screen">
       <section className="w-full pt-12 md:pt-24 lg:pt-32">
         <div className="container px-4 md:px-6">
@@ -77,6 +84,8 @@ export default function ShirtTryon() {
         </div>
       </section>
     </div>
+    <Footer/>
+                 </>
   );
 }
 
